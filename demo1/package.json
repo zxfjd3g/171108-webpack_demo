@@ -1,0 +1,12 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  }
+}
