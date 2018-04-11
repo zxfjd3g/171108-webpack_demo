@@ -2,7 +2,7 @@ import $ from 'jquery'  // 引入第三方的js模块
 import {cube} from "./js/math"; // 引入自定义js模块
 import './assets/css/style.css' // 引入css模块
 import lessons from './assets/json/lessons.json' // 引入json模块
-import * as atguigu from './js/atguigu'
+// import * as atguigu from './js/atguigu'
 
 
 $(function () {
@@ -15,9 +15,11 @@ $(function () {
   $('#app').append($ul)
   const $button = $('<button>去尚硅谷吗?</button>')
   $button.appendTo('#app').on('click', () => {
-    if(atguigu.studyConfirm()) {
-      atguigu.goAtguigu()
-    }
+    import('./js/atguigu').then(atguigu => {
+      if(atguigu.studyConfirm()) {
+        atguigu.goAtguigu()
+      }
+    })
   })
 })
 

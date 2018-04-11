@@ -69,6 +69,10 @@ module.exports = merge(baseConfig, {
       compress: {  //压缩配置
         warnings: false  // 不显示警告
       }
-    })
-  ]
+    }),
+    // 根据代码内容生成hash作为模块的id(默认是下标)
+    new webpack.HashedModuleIdsPlugin(),
+  ],
+
+  devtool: 'source-map'
 })
