@@ -13,8 +13,8 @@ $(function () {
   })
   // $ul.appendTo('#app')
   $('#app').append($ul)
-
-  $('#app').append('<button>去尚硅谷吗?</button>').on('click', () => {
+  const $button = $('<button>去尚硅谷吗?</button>')
+  $button.appendTo('#app').on('click', () => {
     if(atguigu.studyConfirm()) {
       atguigu.goAtguigu()
     }
