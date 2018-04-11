@@ -1,0 +1,1 @@
+var hotClient = require('webpack-hot-middleware/client')
